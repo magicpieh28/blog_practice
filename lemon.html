@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- tistory 치환자 정리: https://carpio.tistory.com/48 -->
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<!--  접은글 표  -->
+    <script>
+        $(document).ready(function(){ $(".btn-toggle-moreless")
+            .each(function(){ var text_more = $(this).parent().first()
+                .data("text-more"); var text_less = $(this).parent().first()
+                .data("text-less"); $(this).text(text_more); $(this)
+                .on("click", function(){
+                    if ($(this).text() == "접기") { $(this).text(text_less); } else { $(this).text(text_more);
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107452794-1"></script>
+
+<!-- 접은 글 닫기 위치 변경 스크립트 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script>
+        // 접은 글 닫기 위치 변경 스크립트
+        $(document).ready(function(){
+            $(".btn-toggle-moreless").after().each(function(){
+                $(this).parent().find(".moreless-content").first().after($(this));
+            });
+        });
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-107452794-1');
+    </script>
+
+    <meta charset="UTF-8">
+<!--  반응형 블로그를 만들기 위해  -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0,
+        minimum-scale=1.0, width=device-width">
+
+<!--  google analysis  -->
+    <meta name="google-site-verification" content="QfgqQmUOwCQrn2uTZuAJOsoGQzwnt1QUndqOoxpPIaw" />
+    <meta name="robots" content="noindex">
+
+<!--  블로그 이름  -->
+    <title>[##_page_title_##]</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="./images/font.css">
+
+<!--[if gte IE 9]><!-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<!--  첫 화면 지정 스크립트  -->
+    <script type="text/javascript">
+        if ( window.location.pathname == '/' ) {
+            // location.href = '첫화면으로 설정할 블로그 주소를 넣어주세요';
+            location.href = 'http://likelemon.tistory.com/category';
+        }
+    </script>
+</head>
+
+<body id="[##_body_id_##]">
+<!-- s_t3: java script가 어느 부분에서 실행되야 하는지 알리기 위한 태그 -->
+<!--    <s_t3>-->
+
+        <header>
+            <div class="containers">
+                <div class="profile">
+                    <span class="icon">
+                        <img src="[##_image_##]" class="img_profile" alt="프로필사진">
+                    </span>
+                    <h1 class="blog_name">
+                        <a href="[##_blog_link_##]">[##_title_##]</a>
+                    </h1>
+                </div>
+
+<!--    tistory가 제공: 자리만 만들면 됨    <div class="tistory_menu"></div>-->
+
+                <s_sidebar>
+                    <div class="search_tool">
+                        <s_sidebar_element>
+                            <p class="search">Search</p>
+                        </s_sidebar_element>
+                        <s_sidebar_element>
+                            <p class="tags">Tags</p>
+                        </s_sidebar_element>
+                    </div>
+                </s_sidebar>
+
+            </div>
+            <div class="clear"></div>
+        </header>
+
+        <div class="main">
+            <div class="containers">
+
+                <s_sidebar>
+                    <div class="container">
+                        <s_sidebar_element>
+                            <h1 class="notice">[##_notice_rep_title_##]</h1>
+                        </s_sidebar_element>
+                        <s_sidebar_element>
+                            <h1 class="recent_post">[##_rctps_rep_title_##]</h1>
+                        </s_sidebar_element>
+                        <s_sidebar_element>
+                            <h1 class="recent_comment">[##_rctrp_rep_desc_##]</h1>
+                        </s_sidebar_element>
+                    </div>
+                </s_sidebar>
+
+                <s_sidebar>
+                    <div class="container">
+                        <s_sidebar_element>
+                            <h1 class="categories">[##_category_list_##]</h1>
+                        </s_sidebar_element>
+                    </div>
+                </s_sidebar>
+
+                <s_sidebar>
+                    <div class="container">
+                        <s_sidebar_element>
+                            <h1 class="tags">[##_tag_name_##]</h1>
+                        </s_sidebar_element>
+                    </div>
+                </s_sidebar>
+
+                <s_sidebar>
+                <div class="container">
+                    <s_sidebar_element>
+                        <h1 class="word_note">애매한 단어장</h1>
+                    </s_sidebar_element>
+                </div>
+                </s_sidebar>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <footer>
+            <div class="containers">
+                <div class="container">
+                    <a class="guestbook" href="[##_guestbook_link_##]">방명록</a>
+                </div>
+                <div class="container">
+                    <dl class="visitor">
+                        <dt>Yesterday</dt>
+                        <dd>[##_count_yesterday_##]</dd>
+                    </dl>
+                    <dl class="visitor">
+                        <dt>Today</dt>
+                        <dd>[##_count_today_##]</dd>
+                    </dl>
+                    <dl class="visitor">
+                        <dt>Total</dt>
+                        <dd>[##_count_total_##]</dd>
+                    </dl>
+                </div>
+                <div class="container">
+                    <p class="sign">designed by [##_blogger_##]</p>
+                </div>
+            </div>
+        </footer>
+
+<!--    </s_t3>-->
+</body>
+</html>

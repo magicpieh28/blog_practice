@@ -1,0 +1,93 @@
+@import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') ; /* 에스코어드림Lt*/
+body        { font-family: 'S-CoreDream-3Light', sans-serif; }
+.normal     { font-weight: 400 }
+.bold       { font-weight: 700 }
+.bolder     { font-weight: 800 }
+.light      { font-weight: 300 }
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css); /*명조*/
+
+img {width: 80%; height:auto;}
+html, body{height:100%;min-height:100%}
+
+/* header */
+header {
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+}
+header .containers {
+    padding: 5px 20px;
+    width: 52%;
+}
+.profile {
+    width: 30%;
+    float: left;
+    flex: auto;
+}
+.icon {
+    padding: 0 20px;
+    height: 90%;
+    float: left;
+}
+.blog_name {
+    font-size: 20px;
+}
+.search_tool {
+    float: right;
+    display: flex;
+}
+
+.search {
+    flex: auto;
+    margin-right: 10px;
+}
+
+/* main */
+.main {
+    background-color: #ffde18;
+    display: flex;
+    padding: 30px;
+    width: 96%;
+}
+
+.main .containers {
+    padding: 20px;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+}
+
+.main .container {
+    width: 25%;
+    flex: auto;
+    margin: 10px;
+    text-align: center;
+    color: #878f40;
+}
+
+/* footer */
+footer {
+    background-color: #ffffff;
+}
+
+footer .containers {
+    display: flex;
+    width: 100%;
+    height: 49px;
+}
+
+footer .container {
+    flex: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.visitor {
+    float: left;
+}
+
+/**/
+.clear {
+    clear: left;
+}
